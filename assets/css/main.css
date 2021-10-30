@@ -187,6 +187,12 @@ input, select, textarea {
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
 		margin: 0 0 1rem 0;
+		
+	}
+	.esp_gradient{
+		background-image: linear-gradient(90deg, red, yellow, red);
+		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
