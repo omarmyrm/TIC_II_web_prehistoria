@@ -10,7 +10,9 @@
 	background-color: lightgoldenrodyellow;
 	border-radius: 25px;
 	padding: 1px 20px;
-	margin: 30px;
+	width: 75%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 html, body, div, span, applet, object,
