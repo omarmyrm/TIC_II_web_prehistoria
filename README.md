@@ -18,3 +18,5 @@ Modificaciones de la plantilla:
 
 8. Cambio de fuente de algunas etiquetas: h2-h6 y body: 'Nunito' de Google Fonts. h1 permanece con la original para diferenciar el título.
 
+
+LA PLANTILLA DE ESTA PÁGINA WEB ES LIBRE Y HA SIDO OBTENIDA DE LA PLATAFORMA HTML5 UP (MASSIVELY).
