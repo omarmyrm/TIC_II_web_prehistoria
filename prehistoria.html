@@ -6,17 +6,25 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>Prehistoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload = "ocultar_principio()";>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+                
+                
+<div class="scroll">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+                
+                
 				<!-- Header -->
 				<header id="header">
 					<a href="index.html" class="logo">Historia de España</a>
@@ -30,9 +38,9 @@
 							<li><a href="protohistoria.html">Protohistoria</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/omarmyrm/TIC_II_web_prehistoria.git" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/iesryc_ab" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/omarmyrm/TIC_II_web_prehistoria.git" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -77,7 +85,7 @@
 							</section>
 						<!-- Ejercicio -->
 							<section class="ejercicio">
-								<p id="ej_pre"><b>Relaciones los acontecimientos con las fechas:</b></p>
+								<p id="ej_pre"><b class="plum_color">Ejercicio: </b><b>Relacione los acontecimientos con las fechas:</b></p>
 								<ul>
 									<li>Hace 1 400 000 años</li>
 									<li>Hace 900 000 años</li>
@@ -88,8 +96,28 @@
 									<li>Aparece el Homo Antecessor</li>
 									<li>Inicios del Neolítico</li>
 								</ul>
+                                <a onclick="myFunction()" class="button primary" id="mostrar">Mostrar soluciones</a>
+                                <a onclick="myFunction()" class="button primary" id="ocultar">Ocultar soluciones</a>
+                                <div id="soluciones">
+                                
+                                    <p></p>
+                                    <ul class=red_color>
+                                        <li>Hace 1 400 000 años: Aparición del Homo Heidelbergensis</li>
+                                        <li>Hace 900 000 años:Aparece el Homo Antecessor</li>
+                                        <li>Hace 8000-5000 años: Inicios del Neolítico</li>
+                                        <li>VI milenio a.C: Surge la E.Metales</li>
+                                    </ul>
+                                </div>
+                                <p></p>
+                                <p>Por último, la visualización de este video puede ayudar a comprender el tema:</p>
+                                <iframe width="640" height="360" src="https://www.youtube.com/embed/UkWFyVbNb4g">
+                                </iframe>
+
 							</section>
+                            
+                            
 					</div>
+                
 
 				<!-- Footer -->
 				<footer id="footer">
@@ -109,9 +137,9 @@
 						<section>
 							<h3>Social</h3>
 							<ul class="icons alt">
-								<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/omarmyrm/TIC_II_web_prehistoria.git" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://twitter.com/iesryc_ab" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.instagram.com/iesryc_ab" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/omarmyrm/TIC_II_web_prehistoria.git" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
 							</ul>
 						</section>
 					</section>
@@ -134,5 +162,39 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+        <script>
+            function myFunction() {
+              var x = document.getElementById("soluciones");
+              var y = document.getElementById("ocultar");
+              var z = document.getElementById("mostrar");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display = "block";
+                z.style.display = "none";
+              } else {
+                x.style.display = "none";
+                y.style.display = "none";
+                z.style.display = "block";
+              }
+            }
+            function ocultar_principio() {
+                var x = document.getElementById("soluciones");
+                var y = document.getElementById("ocultar");
+                x.style.display = "none";
+                y.style.display = "none";
+                }
+            // When the user scrolls the page, execute scrollFunction 
+            
+            
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+        
 	</body>
 </html>
